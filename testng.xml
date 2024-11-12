@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Selenium 4 Automation">
-    <test name="QA Automation" parallel = "classes" thread-count = "1">
-<!--        <groups>-->
-<!--           <dependencies>-->
-<!--               <group name="b" depends-on="a"></group>-->
-<!--               <group name="c" depends-on="a"></group>-->
-<!--               <group name="d" depends-on="a"></group>-->
-<!--           </dependencies>-->
-<!--        </groups>-->
+<suite name="Selenium 4 Automation" parallel="tests" thread-count="3">
+    <test name="QA Automation1">
+        <parameter name="Browser" value="chrome"/>
         <classes>
             <class name="testcases.TC02_Cart">
                 <methods>
@@ -21,7 +15,40 @@
                     <exclude name="getSecondWindowTitle"></exclude>
                 </methods>
             </class>
-            
+        </classes>
+    </test>
+
+    <test name="QA Automation2">
+        <parameter name="Browser" value="firefox"/>
+        <classes>
+            <class name="testcases.TC02_Cart">
+                <methods>
+                    <include name="verifyTotalPrice"/>
+                </methods>
+            </class>
+            <class name="testcases.TC03_Product"/>
+            <class name="testcases.TC04_Account">
+                <methods>
+                    <exclude name="getSecondWindowTitle"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test name="QA Automation3">
+        <parameter name="Browser" value="MicrosoftEdge"/>
+        <classes>
+            <class name="testcases.TC02_Cart">
+                <methods>
+                    <include name="verifyTotalPrice"/>
+                </methods>
+            </class>
+            <class name="testcases.TC03_Product"/>
+            <class name="testcases.TC04_Account">
+                <methods>
+                    <exclude name="getSecondWindowTitle"></exclude>
+                </methods>
+            </class>
         </classes>
     </test>
 </suite>
