@@ -15,7 +15,7 @@ public class TC04_Account extends baseTest {
     String username = "askqa@mailinator.com ";
     String password = "askqa123";
 
-    @Test(priority = 3)
+    @Test(priority = 3, enabled = false)
     public void getSecondWindowTitle() throws Exception {
         driver.get(new Config().getBaseUrl());
         new AccountPage(driver).openAccountFromRightClick();

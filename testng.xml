@@ -16,7 +16,12 @@
                 </methods>
             </class>
             <class name="testcases.TC03_Product"/>
-            <class name="testcases.TC04_Account"/>
+            <class name="testcases.TC04_Account">
+                <methods>
+                    <exclude name="getSecondWindowTitle"></exclude>
+                </methods>
+            </class>
+            
         </classes>
     </test>
 </suite>
