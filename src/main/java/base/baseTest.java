@@ -30,6 +30,7 @@ public class baseTest {
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless=new");
             options.merge(capabilities);
+            driver = new RemoteWebDriver(new URL(" http://192.168.0.69:4444"),capabilities);
         }
         else if(Browser.equals("firefox")) {
             capabilities.setPlatform(Platform.ANY);
@@ -38,6 +39,7 @@ public class baseTest {
             FirefoxOptions options = new FirefoxOptions();
             options.addArguments("--headless=new");
             options.merge(capabilities);
+            driver = new RemoteWebDriver(new URL(" http://192.168.0.69:4444"),capabilities);
         }
         else if(Browser.equals("MicrosoftEdge")) {
             capabilities.setPlatform(Platform.ANY);
@@ -46,11 +48,12 @@ public class baseTest {
             EdgeOptions options = new EdgeOptions();
             options.addArguments("--headless=new");
             options.merge(capabilities);
+            driver = new RemoteWebDriver(new URL(" http://192.168.0.69:4444"),capabilities);
         }
         //System.setProperty("webdriver.chrome.driver", "C:\\Users\\farha\\Downloads\\chromedriver-win64\\chromedriver-win64\\chromedriver.exe");
         //driver = new ChromeDriver();
         //driver.manage().window().maximize();
-        driver = new RemoteWebDriver(new URL(" http://192.168.0.69:4444"),capabilities);
+
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); // Use seconds, not milliseconds
     }
 
