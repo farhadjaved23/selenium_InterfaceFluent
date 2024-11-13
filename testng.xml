@@ -17,7 +17,7 @@
             </class>
         </classes>
     </test>
-    <!--Integrated Github Wehbook-->
+    <!--Check Integrated Github Wehbook-->
     <test name="QA Automation2">
         <parameter name="Browser" value="firefox"/>
         <classes>
