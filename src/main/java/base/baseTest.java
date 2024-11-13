@@ -28,7 +28,6 @@ public class baseTest {
             capabilities.setBrowserName("chrome");
 
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--headless=new");
             options.merge(capabilities);
             driver = new RemoteWebDriver(new URL(" http://192.168.0.69:4444"),capabilities);
         }
@@ -37,7 +36,7 @@ public class baseTest {
             capabilities.setBrowserName("firefox");
 
             FirefoxOptions options = new FirefoxOptions();
-            options.addArguments("--headless=new");
+//            options.addArguments("--headless=new");
             options.merge(capabilities);
             driver = new RemoteWebDriver(new URL(" http://192.168.0.69:4444"),capabilities);
         }
@@ -46,7 +45,6 @@ public class baseTest {
             capabilities.setBrowserName("MicrosoftEdge");
 
             EdgeOptions options = new EdgeOptions();
-            options.addArguments("--headless=new");
             options.merge(capabilities);
             driver = new RemoteWebDriver(new URL(" http://192.168.0.69:4444"),capabilities);
         }
