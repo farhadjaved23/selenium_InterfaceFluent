@@ -18,17 +18,17 @@
 <!--        </classes>-->
 <!--    </test>-->
 <!--    &lt;!&ndash;Check Integrated Github Wehbookss   &ndash;&gt;-->
-<!--    <test name="QA Automation2">-->
-<!--        <parameter name="Browser" value="firefox"/>-->
-<!--        <classes>-->
-<!--            <class name="testcases.TC03_Product"/>-->
-<!--            <class name="testcases.TC04_Account">-->
-<!--                <methods>-->
-<!--                    <exclude name="getSecondWindowTitle"></exclude>-->
-<!--                </methods>-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="QA Automation2">
+        <parameter name="Browser" value="firefox"/>
+        <classes>
+            <class name="testcases.TC03_Product"/>
+            <class name="testcases.TC04_Account">
+                <methods>
+                    <exclude name="getSecondWindowTitle"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
 
     <test name="QA Automation3">
         <parameter name="Browser" value="MicrosoftEdge"/>
