@@ -31,15 +31,15 @@ public class baseTest {
             options.merge(capabilities);
             driver = new RemoteWebDriver(new URL(" http://192.168.0.69:4444"),capabilities);
         }
-        else if(Browser.equals("firefox")) {
-            capabilities.setPlatform(Platform.ANY);
-            capabilities.setBrowserName("firefox");
-
-            FirefoxOptions options = new FirefoxOptions();
-//            options.addArguments("--headless=new");
-            options.merge(capabilities);
-            driver = new RemoteWebDriver(new URL(" http://192.168.0.69:4444"),capabilities);
-        }
+//        else if(Browser.equals("firefox")) {
+//            capabilities.setPlatform(Platform.ANY);
+//            capabilities.setBrowserName("firefox");
+//
+//            FirefoxOptions options = new FirefoxOptions();
+////            options.addArguments("--headless=new");
+//            options.merge(capabilities);
+//            driver = new RemoteWebDriver(new URL(" http://192.168.0.69:4444"),capabilities);
+//        }
         else if(Browser.equals("MicrosoftEdge")) {
             capabilities.setPlatform(Platform.ANY);
             capabilities.setBrowserName("MicrosoftEdge");
